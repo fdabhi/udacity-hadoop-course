@@ -1,0 +1,23 @@
+Mapper takes in data using standard input, so to enter data enter the below command and later type the data
+
+./mapper.py
+Field1	f1	f2	f3	f4	f5	f6
+FieldA	fA	fB	fC	fD	fE	fF
+
+hit ctrl + d to simulate end of data
+hit ctrl + d again to go back to terminal
+
+
+To build a small sample data file from an existing text file, below are the command
+
+First 50 lines of text file (make sure the path of the file is correct)
+
+head -50 ../data/purchases.txt > testfile
+
+to pass this testfile to mapper/reducer, run below command... terminal should be present in the code folder
+
+cat testfile | ./mapper.py
+
+To run the entire map reduce without hadoop run the below command..
+
+cat testfile | ./mapper.py | sort | ./reducer.py
